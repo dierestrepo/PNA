@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Relaciones entre Acciones — Política Nacional del Agua</title>
+<style>
+:root{color-scheme:light}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f7fa;color:#1a2332;font-size:14px}
+.hdr{background:#1a3a5c;color:#fff;padding:18px 26px 14px}
+.hdr h1{font-size:17px;font-weight:700;letter-spacing:-.3px}
+.hdr p{font-size:11px;opacity:.75;margin-top:3px}
+.tabs{display:flex;background:#fff;border-bottom:2px solid #e2e8f0;padding:0 26px;overflow-x:auto}
+.tab{padding:11px 15px;cursor:pointer;font-size:12px;font-weight:500;color:#64748b;border-bottom:2px solid transparent;margin-bottom:-2px;white-space:nowrap;flex-shrink:0;transition:color .15s}
+.tab:hover{color:#1a3a5c}.tab.active{color:#1a3a5c;border-bottom-color:#2563eb;font-weight:600}
+.content{padding:20px 26px;max-width:1100px}
+.panel{display:none}.panel.active{display:block}
+.stats{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.stat{background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:12px 16px;flex:1;min-width:120px}
+.stat .num{font-size:24px;font-weight:800;line-height:1}
+.stat .lbl{font-size:10px;color:#64748b;margin-top:3px}
+.banner{background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:10px 14px;margin-bottom:14px;font-size:11px;color:#1e40af;line-height:1.55}
+.mxw{overflow-x:auto;margin-bottom:14px}
+table.mx{border-collapse:collapse}
+table.mx th,table.mx td{border:1px solid #e2e8f0}
+table.mx th{background:#f8fafc;font-size:10px;font-weight:600;color:#475569;padding:5px 8px;text-align:center}
+table.mx th.rh{text-align:right;min-width:105px;padding-right:10px}
+table.mx td{width:66px;height:50px;text-align:center;cursor:pointer;transition:filter .1s}
+table.mx td:hover{filter:brightness(.9)}
+table.mx td .cnt{font-size:15px;font-weight:700;line-height:1}
+table.mx td .lb2{font-size:8px;margin-top:1px}
+table.mx td.self{background:#e2e8f0!important;cursor:default}
+table.mx td.zero{background:#f8fafc;cursor:default}
+.dbox{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:14px 16px;min-height:58px;margin-top:12px}
+.dbox h3{font-size:12px;font-weight:700;color:#1a3a5c;margin-bottom:9px}
+.ph{color:#94a3b8;font-size:12px;font-style:italic}
+.ri{border-left:3px solid #e2e8f0;padding:8px 12px;margin-bottom:8px;border-radius:0 5px 5px 0;background:#fafbfc}
+.ri .tp{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:3px}
+.ri .nt{font-size:11px;color:#64748b;margin-top:4px;font-style:italic;line-height:1.4}
+.sec-t{font-size:14px;font-weight:700;color:#1a3a5c;margin-bottom:12px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:11px}
+.card{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:14px}
+.badge{display:inline-block;padding:2px 8px;border-radius:20px;font-size:10px;font-weight:700;text-transform:uppercase}
+.bdg-s{background:#fef3c7;color:#92400e}
+.card h4{font-size:12px;font-weight:700;color:#1a3a5c;line-height:1.35;margin:7px 0 9px}
+.ar{display:flex;align-items:baseline;gap:7px;margin-bottom:5px;padding:5px 8px;border-radius:6px;background:#f8fafc}
+.ot{flex-shrink:0;font-size:9px;font-weight:700;padding:2px 6px;border-radius:10px;color:#fff}
+.at{font-size:11px;color:#334155;line-height:1.3}
+.nc{font-size:11px;color:#64748b;margin-top:7px;padding:6px 9px;border-radius:6px;background:#fefce8;border-left:3px solid #fbbf24;line-height:1.4}
+.cl{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:13px 16px;margin-bottom:10px}
+.clh{display:flex;align-items:center;gap:8px;cursor:pointer}
+.clh h3{font-size:12px;font-weight:700;color:#1a3a5c}
+.clc{background:#eff6ff;color:#2563eb;padding:2px 7px;border-radius:10px;font-size:10px;font-weight:700}
+.clt{margin-left:auto;color:#94a3b8;font-size:13px;transition:transform .2s}
+.cl.open .clt{transform:rotate(180deg)}
+.clb{display:none;margin-top:9px}
+.cl.open .clb{display:block}
+.tt{display:inline-block;background:#f1f5f9;color:#475569;padding:2px 7px;border-radius:10px;font-size:10px;margin:0 2px 3px 0}
+#tree-scroll{overflow-y:auto;border:1px solid #e2e8f0;border-radius:10px;background:#f7f4ef;max-height:76vh}
+#tree-svg{display:block}
+</style>
+</head>
+<body>
+<div class="hdr">
+  <h1>Política Nacional del Agua — Relaciones entre Acciones Estratégicas</h1>
+  <p>38 acciones · 6 componentes Programa Unificado de Instrumentos · 7 objetivos · análisis de relaciones directas</p>
+</div>
+<div class="tabs">
+  <div class="tab active" onclick="showTab('matriz',event)">Matriz de relaciones</div>
+  <div class="tab" onclick="showTab('sim',event)">Muy similares</div>
+  <div class="tab" onclick="showTab('comp',event)">Complementarias</div>
+  <div class="tab" onclick="showTab('clus',event)">Temas transversales</div>
+  <div class="tab" onclick="showTab('mapa',event)">Mapa conceptual</div>
+</div>
+<div class="content">
+
+<div id="panel-matriz" class="panel active">
+  <div class="banner">Análisis de relaciones directas entre las acciones vigentes de los 7 objetivos de la PNA, incluyendo el Programa Unificado de Instrumentos con sus 6 componentes. Se identifican acciones con alta superposición (que requieren coordinación o redefinición de roles) y acciones complementarias (que se refuerzan mutuamente).</div>
+  <div class="stats">
+    <div class="stat"><div class="num" style="color:#f59e0b">8</div><div class="lbl">Acciones muy similares</div></div>
+    <div class="stat"><div class="num" style="color:#3b82f6">13</div><div class="lbl">Relaciones complementarias</div></div>
+    <div class="stat"><div class="num" style="color:#1a3a5c">9</div><div class="lbl">Temas transversales</div></div>
+  </div>
+  <p style="font-size:11px;color:#64748b;margin-bottom:12px">Clic en una celda para ver las relaciones específicas entre dos objetivos.</p>
+  <div class="mxw">
+    <table class="mx"><thead><tr>
+      <th class="rh"></th>
+      <th>Calidad</th><th>Conoc.</th><th>Demanda</th><th>Gobern.</th><th>Instrum.</th><th>Oferta</th><th>Riesgo</th>
+    </tr></thead><tbody id="mxBody"></tbody></table>
+  </div>
+  <div class="dbox" id="dBox"><div class="ph">← Selecciona una celda para ver las relaciones entre esos dos objetivos</div></div>
+</div>
+
+<div id="panel-sim" class="panel">
+  <p class="sec-t">Acciones con alta superposición</p>
+  <div class="banner">Se identificaron <strong>8 pares o grupos de acciones</strong> con alto solapamiento temático entre objetivos distintos. Cada uno requiere coordinación explícita o redefinición de roles para evitar esfuerzos paralelos, regulaciones contradictorias o duplicación de recursos.</div>
+  <div class="cards" id="cSim"></div>
+</div>
+
+<div id="panel-comp" class="panel">
+  <p class="sec-t">Relaciones complementarias entre objetivos</p>
+  <div id="lComp"></div>
+</div>
+
+<div id="panel-clus" class="panel">
+  <p class="sec-t">Temas transversales que atraviesan múltiples objetivos</p>
+  <div id="lClus"></div>
+</div>
+
+<div id="panel-mapa" class="panel">
+  <p style="font-size:11px;color:#64748b;margin-bottom:10px">Árbol conceptual horizontal: raíz → objetivos → líneas estratégicas → acciones. Pasa el cursor sobre una acción para ver su nombre completo.</p>
+  <div id="tree-scroll"><svg id="tree-svg" xmlns="http://www.w3.org/2000/svg"></svg></div>
+</div>
+
+</div>
+<script>
+const OBJS=['Calidad','Conocimiento','Demanda','Gobernanza','Instrumentos','Oferta','Riesgo'];
+const OC={Calidad:'#ef4444',Conocimiento:'#8b5cf6',Demanda:'#f59e0b',Gobernanza:'#10b981',Instrumentos:'#3b82f6',Oferta:'#06b6d4',Riesgo:'#f97316'};
+
+const REL=[
+  // ── MUY SIMILARES ──────────────────────────────────────────────
+  {t:'S',p:[['Gobernanza','LE1-AG4: Aguas compartidas'],['Instrumentos','Comp. 2: Articulación territorial']],
+   tema:'Gobernanza de cuencas compartidas y transfronterizas',
+   nota:'Gobernanza LE1-AG4 estructura el modelo técnico-diplomático para cuencas compartidas (cooperación, monitoreo, resolución de conflictos). El Componente 2 incluye exactamente el mismo objeto: cuencas transfronterizas bajo rectoría de Cancillería. Propuesta de roles: Gobernanza define el marco diplomático e institucional; Comp. 2 es el instrumento técnico de implementación.'},
+  {t:'S',p:[['Gobernanza','LE1-AG5: Municipios PDET'],['Instrumentos','Comp. 2: Articulación territorial']],
+   tema:'Ordenamiento alrededor del agua en municipios PDET',
+   nota:'Gobernanza LE1-AG5 integra el PZA y la ZAP como criterios en instrumentos de gestión del agua en municipios PDET. El Componente 2 incorpora los mismos criterios (Ley 2565 de 2026) en los instrumentos de planificación y administración del agua en esos mismos territorios. Necesitan una sola ruta técnica y un solo interlocutor ante la ART para evitar señales contradictorias en el territorio.'},
+  {t:'S',p:[['Conocimiento','Acción 3: Democratización'],['Gobernanza','LE2-AG7: Educación intercultural']],
+   tema:'Educación ambiental y democratización del conocimiento hídrico',
+   nota:'Conocimiento diseña el Programa Nacional de Democratización del Conocimiento Hídrico (acceso equitativo, lenguajes inclusivos, Escazú). Gobernanza diseña la Estrategia de Educación Intercultural para Ciudadanías Protectoras del Agua (diálogo de saberes, comunidades étnicas). Mismo público objetivo, mismos territorios, mismos canales. Se recomienda articular bajo un único programa con liderazgo compartido.'},
+  {t:'S',p:[['Riesgo','Acción 4.1: Marco normativo'],['Instrumentos','Comp. 1: Gobernanza adaptativa']],
+   tema:'Gestión adaptativa del riesgo en instrumentos de planificación del agua',
+   nota:'Riesgo 4.1 incorpora la gestión adaptativa y del riesgo hídrico en los instrumentos de planificación y administración. El Componente 1 crea el Marco de Gobernanza Adaptativa con evaluaciones periódicas, umbrales técnicos de actuación y rutas de adaptación sobre esos mismos instrumentos. Propuesta: Riesgo 4.1 provee la metodología de análisis de riesgo hídrico; Comp. 1 la integra en los ciclos evaluativos.'},
+  {t:'S',p:[['Oferta','Acción 8: Regímenes caudal ambiental'],['Instrumentos','Comp. 4: Administración ecológica']],
+   tema:'Caudal ambiental para conservación de ecosistemas y administración del agua',
+   nota:'Oferta Acción 8 establece regímenes de caudal ambiental como criterio técnico, ecológico y social para conservar la oferta hídrica y los ecosistemas acuáticos. El Componente 4 establece el caudal ambiental como condición previa verificable en concesiones, permisos de vertimiento y PUEAA. Roles propuestos: Oferta define el régimen ecológico de conservación; Comp. 4 lo operativiza en la administración. Requieren una metodología técnica compartida.'},
+  {t:'S',p:[['Demanda','AD6: Reúso y recirculación'],['Instrumentos','Comp. 4: Administración ecológica']],
+   tema:'Reúso de aguas residuales tratadas como oferta hídrica complementaria',
+   nota:'Demanda AD6 escala el reúso y la recirculación de aguas residuales tratadas para usos no potables, integrándolos en PSMV/PORH como fuente de respaldo en sequía. El Componente 4 integra el reúso como oferta gestionada complementaria diferenciada de la oferta natural en el balance hídrico territorial. Propuesta: AD6 define la política sectorial de reúso; Comp. 4 es el instrumento de integración en el balance hídrico.'},
+  {t:'S',p:[['Calidad','3.2-A: Tasa Retributiva'],['Instrumentos','Comp. 5: Señales económicas']],
+   tema:'Tasa Retributiva como instrumento de descontaminación y señal económica',
+   nota:'Calidad 3.2-A fortalece la Tasa Retributiva como señal económica real con metas verificables de reducción de carga (DBO5, SST, nitrógeno, fósforo) y apoyo técnico diferencial. El Componente 5 consolida la TR articulada a los objetivos de calidad del PORH con trazabilidad en el SNCA y ampliación progresiva de parámetros. Propuesta: Calidad define las metas sectoriales de reducción de carga; Comp. 5 establece el mecanismo económico y la arquitectura de trazabilidad.'},
+  {t:'S',p:[['Oferta','Acción 3: Regiones hídricas OT'],['Instrumentos','Comp. 3: Planificación multiescala']],
+   tema:'Regiones hídricas como marco supramunicipal del ordenamiento territorial',
+   nota:'Oferta Acción 3 operacionaliza las regiones hídricas como territorios funcionales supramunicipales para el ordenamiento territorial alrededor del agua. El Componente 3 incorpora el análisis de conectividad hidroclimática de las regiones hídricas como criterio técnico estructurante en los instrumentos de planificación. Alta superposición en el objeto técnico — se recomienda una sola definición metodológica de regiones hídricas con Oferta orientando y Comp. 3 aplicando en los instrumentos.'},
+
+  // ── COMPLEMENTARIAS ────────────────────────────────────────────
+  {t:'C',p:[['Conocimiento','Acción 1: SNCA/SIRH+'],['Conocimiento','Acción 2: Monitoreo'],['Demanda','AD2: Trazabilidad usos'],['Riesgo','Acción 4.4: Alertas tempranas'],['Instrumentos','Comp. 1: Gobernanza adaptativa']],
+   tema:'Cadena de información: SNCA → monitoreo → trazabilidad → alertas → gobernanza adaptativa',
+   nota:'El SNCA/SIRH+ (base de datos integrada) → redes de monitoreo estandarizadas → RURH de trazabilidad de demanda → Sistema de Alertas Tempranas (SNGRD) → ciclos evaluativos ERA/ENA del Comp. 1. Sin interoperabilidad garantizada por el SNCA, cada eslabón opera como silo y la cadena no produce decisiones adaptativas. Son cinco acciones que deben diseñarse con protocolos de interoperabilidad desde el inicio.'},
+  {t:'C',p:[['Oferta','Acción 2: PEM macrocuencas'],['Oferta','Acción 3: Regiones hídricas'],['Oferta','Acción 5: ZSH'],['Instrumentos','Comp. 3: Planificación multiescala'],['Riesgo','Acción 4.1: Marco normativo']],
+   tema:'Arquitectura de planificación: PEM → regiones hídricas → ZSH → planificación integrada → gestión del riesgo',
+   nota:'Los PEM (Oferta 2) orientan prioridades de macrocuenca; las regiones hídricas (Oferta 3) son el marco supramunicipal; las ZSH (Oferta 5) focalizan la conservación en áreas estratégicas; el Comp. 3 armoniza todos los instrumentos de planificación (POMCA, POMIUAC, PMAA, PORH, POT); Riesgo 4.1 incorpora el riesgo en esa arquitectura. Sin cronogramas coordinados, cada instrumento planificará con horizontes y criterios distintos sobre los mismos territorios.'},
+  {t:'C',p:[['Demanda','AD5: Productividad hídrica'],['Demanda','AD6: Reúso'],['Instrumentos','Comp. 4: Administración ecológica']],
+   tema:'Eficiencia hídrica, reúso y administración ecológica como ciclo cerrado',
+   nota:'AD5 fija estándares sectoriales de productividad hídrica y reconversión tecnológica. AD6 escala el reúso como fuente alterna. Comp. 4 transforma el PUEAA en instrumento vinculante del balance hídrico e integra el reúso como oferta gestionada complementaria. Secuencia lógica: estándares definen la meta sectorial → PUEAA la operativiza → reúso complementa la oferta disponible. Los tres deben usar las mismas métricas de balance hídrico.'},
+  {t:'C',p:[['Instrumentos','Comp. 5: Señales económicas'],['Demanda','AD1: Concesiones adaptativas'],['Demanda','AD3: Módulos de consumo']],
+   tema:'TUA calibrada por subzona, coherente con concesiones y módulos de consumo',
+   nota:'El Comp. 5 calibra la TUA según la relación demanda-oferta por subzona en condición media y año seco. Demanda AD1 ajusta las concesiones por variabilidad climática usando los mismos umbrales de presión hídrica. AD3 define los módulos de consumo vinculantes por sector y región hídrica. Los tres instrumentos deben usar la misma métrica de balance hídrico subzonal — de lo contrario, la señal económica puede contradecir los límites técnicos de concesiones y módulos.'},
+  {t:'C',p:[['Gobernanza','LE1-AG1: SNGA'],['Gobernanza','LE1-AG3: Plataforma participación'],['Gobernanza','LE2-AG8: Acuerdos del agua'],['Instrumentos','Comp. 2: Articulación territorial']],
+   tema:'Sistema de gobernanza: SNGA + plataforma + acuerdos del agua + articulación territorial',
+   nota:'El SNGA (AG1) define los tres niveles de gobernanza. La Plataforma (AG3) es el canal de participación incidente. Los Acuerdos del Agua (AG8) transforman conflictos en concertación. El Comp. 2 es el mecanismo técnico que operativiza el SNGA vinculando instrumentos hídricos con decisiones sectoriales y gobernanza comunitaria. Mutuamente dependientes: el SNGA provee la autoridad institucional; el Comp. 2 produce las decisiones técnicamente verificables que el SNGA necesita para ser efectivo.'},
+  {t:'C',p:[['Riesgo','Acción 4.2: Riesgo contaminación'],['Calidad','3.2-C: Fuentes difusas'],['Calidad','3.2-D: Sedimentos contaminados']],
+   tema:'Riesgo por contaminación ↔ fuentes difusas agropecuarias ↔ sedimentos contaminados',
+   nota:'Riesgo 4.2 aborda el riesgo ambiental y ecosistémico por deterioro de la calidad del agua en cuencas vulnerables. Calidad 3.2-C gestiona fuentes difusas agropecuarias en cuencas críticas. Calidad 3.2-D gestiona sedimentos contaminados, principalmente de minería. La priorización territorial del programa intersectorial de Riesgo debe coincidir exactamente con las cuencas donde Calidad identifica fuentes difusas y pasivos sedimentológicos — condición de eficacia.'},
+  {t:'C',p:[['Riesgo','Acción 4.5: SbN'],['Oferta','Acción 7: Ecosistemas estratégicos'],['Oferta','Acción 5: ZSH'],['Instrumentos','Comp. 1: Gobernanza adaptativa']],
+   tema:'SbN para resiliencia ↔ ecosistemas estratégicos ↔ ZSH ↔ gobernanza adaptativa',
+   nota:'Las SbN (Riesgo 4.5) restauran funcionalidad ecosistémica en territorios vulnerables. Oferta 7 define umbrales de integridad ecológica de páramos y humedales. Las ZSH (Oferta 5) focalizan territorialmente la conservación. El Comp. 1 integra la gestión del riesgo en los instrumentos de planificación. La focalización territorial y los umbrales de actuación deben ser compartidos entre estas cuatro acciones para maximizar impacto y evitar duplicar inversiones en el mismo territorio.'},
+  {t:'C',p:[['Conocimiento','Acción 4: I+D+i hídrica'],['Calidad','3.1.1-B: Marco regulatorio calidad']],
+   tema:'Agenda I+D+i hídrica → actualización quinquenal del marco regulatorio de calidad',
+   nota:'La Agenda Nacional de I+D+i (Conocimiento 4) debe alimentar directamente el SNAC-MRCA (Calidad 3.1.1-B): el sistema de revisión quinquenal de criterios y parámetros de calidad incorporando contaminantes emergentes. Sin articulación explícita, los ciclos de investigación y los ciclos regulatorios operan con cronogramas y prioridades desconectadas — la ciencia no llega a la norma.'},
+  {t:'C',p:[['Demanda','AD4: Corresponsabilidad MRV'],['Instrumentos','Comp. 6: Gobernanza financiera'],['Gobernanza','LE2-AG6: Capacidades institucionales']],
+   tema:'Corresponsabilidad sectorial + gobernanza financiera + capacidades institucionales',
+   nota:'AD4 establece acuerdos sectoriales y territoriales con financiamiento por desempeño (MRV). Comp. 6 garantiza la trazabilidad financiero-ambiental en el SNCA articulada con PGAR y PAC. Gobernanza LE2-AG6 fortalece las capacidades institucionales para implementar ambos mecanismos. Sin capacidades suficientes (Gobernanza), los acuerdos (Demanda) no se implementan con calidad. Sin trazabilidad (Instrumentos), los acuerdos no tienen credibilidad ante los sectores.'},
+  {t:'C',p:[['Oferta','Acción 4: Aguas subterráneas'],['Instrumentos','Comp. 3: Planificación multiescala']],
+   tema:'Aguas subterráneas: visibilización en la planificación + criterios ecológicos de administración',
+   nota:'Oferta 4 integra las aguas subterráneas en la planificación ambiental, territorial y sectorial (PNASUB, IDEAM, SGC). Comp. 3 incorpora la gestión integral de acuíferos con criterios de equidad hídrica y recarga gestionada, priorizando sistemas con alta dependencia comunitaria y menor acceso a fuentes superficiales. Perfectamente complementarias: Oferta define la visibilidad e integración; Comp. 3 define los criterios de administración ecológicamente fundados y socialmente equitativos.'},
+  {t:'C',p:[['Calidad','3.1.1-A: PORH y obj. calidad'],['Calidad','3.2-B: PTAR y saneamiento'],['Demanda','AD1: Concesiones adaptativas'],['Demanda','AD3: Módulos de consumo'],['Instrumentos','Comp. 4: Administración ecológica']],
+   tema:'PORH + PSMV + concesiones + módulos de consumo + caudal ambiental = sistema integrado de administración',
+   nota:'El PORH y sus objetivos de calidad (Calidad 3.1.1-A), el PSMV de saneamiento (Calidad 3.2-B), las concesiones adaptativas (Demanda AD1), los módulos de consumo (AD3) y el caudal ambiental vinculante (Comp. 4) deben construirse como un sistema articulado. Lo que define Calidad es el techo de lo que asigna Demanda; ambos determinan el caudal ambiental disponible que Comp. 4 operativiza. Sin coordinación técnica se pueden generar derechos legalmente contradictorios sobre el mismo recurso.'},
+  {t:'C',p:[['Riesgo','Acción 4.3: Capacidad adaptativa'],['Gobernanza','LE1-AG5: Municipios PDET'],['Calidad','3.2-B: PTAR y saneamiento'],['Instrumentos','Comp. 2: Articulación territorial']],
+   tema:'Justicia hídrica: comunidades vulnerables, territorios étnicos y municipios PDET',
+   nota:'Riesgo 4.3 aumenta la capacidad adaptativa de comunidades vulnerables y territorios étnicos frente a riesgos hídricos. Gobernanza LE1-AG5 integra el ordenamiento territorial en municipios PDET con participación diferenciada de comunidades. Calidad 3.2-B prioriza saneamiento y PTAR en PDET y zonas rurales étnicas. Comp. 2 articula los instrumentos hídricos con mecanismos de gobernanza comunitaria en esos mismos territorios. Las cuatro acciones deben priorizar los mismos territorios y comunidades.'},
+  {t:'C',p:[['Gobernanza','LE1-AG6: OT ambiental y territorial'],['Oferta','Acción 2: PEM macrocuencas'],['Instrumentos','Comp. 3: Planificación multiescala']],
+   tema:'Articulación entre ordenamiento ambiental, planes de macrocuenca e instrumentos hídricos',
+   nota:'Gobernanza LE1-AG6 establece la ruta de articulación entre instrumentos de planificación ambiental y territorial, traduciendo las determinantes del ciclo del agua en criterios técnicos del POT. Los PEM (Oferta 2) orientan las prioridades de planificación en las macrocuencas. El Comp. 3 armoniza todos los instrumentos de planificación con esas determinantes. Las tres acciones apuntan al mismo déficit estructural: los instrumentos hídricos no inciden efectivamente en las decisiones territoriales.'}
+];
+
+const CLUS=[
+  {tema:'Programa Unificado de Instrumentos como infraestructura técnica transversal de la PNA',ac:[{o:'Instrumentos',id:'Comp. 1',n:'Marco de gobernanza adaptativa, gestión del riesgo y adaptación climática'},{o:'Instrumentos',id:'Comp. 2',n:'Articulación territorial e intersectorial (CNA, POT, gobernanza comunitaria, PDET)'},{o:'Instrumentos',id:'Comp. 3',n:'Planificación integrada y multiescala (PEM, POMCA, cuenca-costa-mar, acuíferos, agua verde)'},{o:'Instrumentos',id:'Comp. 4',n:'Administración con criterios ecológicos (caudal ambiental, PUEAA, reúso)'},{o:'Instrumentos',id:'Comp. 5',n:'Señales económicas (TUA, Tasa Retributiva articuladas al PORH)'},{o:'Instrumentos',id:'Comp. 6',n:'Gobernanza financiera: trazabilidad inversión-resultados hídricos'}],ts:['transversal a PNA completa','SNCA','balance hídrico','caudal ambiental','TUA','TR','PUEAA','ERA','ENA']},
+  {tema:'Cadena de información y conocimiento hídrico',ac:[{o:'Conocimiento',id:'Acción 1',n:'Sistema Nacional de Conocimiento del Ciclo del Agua (SNCA/SIRH+)'},{o:'Conocimiento',id:'Acción 2',n:'Fortalecimiento del monitoreo (redes oficiales, comunitarias, subterráneas)'},{o:'Demanda',id:'AD2',n:'Trazabilidad y formalización territorial de usos del agua (RURH)'},{o:'Riesgo',id:'Acción 4.4',n:'Sistema Nacional de Alertas Tempranas para riesgos del agua'},{o:'Instrumentos',id:'Comp. 1',n:'Ciclos evaluativos anclados al ENA y ERA como gobernanza adaptativa'}],ts:['SIRH','SNCA','RURH','redes hidrométricas','interoperabilidad','alertas tempranas','ERA','ENA','datos abiertos']},
+  {tema:'Planificación integrada del territorio hídrico',ac:[{o:'Oferta',id:'Acción 2',n:'Planes Estratégicos de Macrocuenca (PEM) actualizados y operativos'},{o:'Oferta',id:'Acción 3',n:'Regiones hídricas como marco funcional supramunicipal del OT'},{o:'Oferta',id:'Acción 5',n:'Zonas de Seguridad Hídrica (ZSH): focalización territorial'},{o:'Instrumentos',id:'Comp. 3',n:'Planificación integrada y multiescala (POMCA, POMIUAC, agua verde, acuíferos)'},{o:'Gobernanza',id:'LE1-AG6',n:'Articulación ordenamiento ambiental y territorial (determinantes hídricas en POT)'}],ts:['PEM','POMCA','regiones hídricas','OTAA','ZSH','macrocuencas','ordenamiento supramunicipal','determinantes ambientales']},
+  {tema:'Caudal ambiental como condición técnica transversal',ac:[{o:'Oferta',id:'Acción 8',n:'Regímenes de Caudal Ambiental para conservar ecosistemas acuáticos'},{o:'Instrumentos',id:'Comp. 4',n:'Caudal ambiental como condición previa vinculante en administración del agua'},{o:'Demanda',id:'AD1',n:'Concesiones adaptativas: caudal ambiental como condición no negociable'},{o:'Demanda',id:'AD3',n:'Módulos de consumo con salvaguardas de caudal ambiental'}],ts:['caudal ambiental','régimen hidrológico','concesiones','ecosistemas acuáticos','funcionalidad hídrica','administración del agua']},
+  {tema:'Adaptación climática y resiliencia territorial frente a riesgos hídricos',ac:[{o:'Riesgo',id:'Acción 4.1',n:'Marco normativo para gestión del riesgo en instrumentos de planificación'},{o:'Riesgo',id:'Acción 4.3',n:'Programa de capacidad adaptativa territorial frente a riesgos hídricos'},{o:'Riesgo',id:'Acción 4.5',n:'Soluciones basadas en la Naturaleza para resiliencia territorial'},{o:'Instrumentos',id:'Comp. 1',n:'Marco de gobernanza adaptativa con umbrales de actuación climáticos'},{o:'Demanda',id:'AD1',n:'Concesiones adaptativas por variabilidad climática y cambio climático'}],ts:['cambio climático','gestión adaptativa','SbN','vulnerabilidad','resiliencia','ERA','SNGRD','umbrales de actuación']},
+  {tema:'Participación ciudadana, gobernanza inclusiva y acuerdos del agua',ac:[{o:'Gobernanza',id:'LE1-AG1',n:'Sistema Nacional para la Gobernanza del Agua (SNGA)'},{o:'Gobernanza',id:'LE1-AG3',n:'Plataforma Nacional de Participación para la Gobernanza'},{o:'Gobernanza',id:'LE2-AG7',n:'Educación intercultural para ciudadanías protectoras del agua'},{o:'Gobernanza',id:'LE2-AG8',n:'Programa Nacional para los Acuerdos del Agua'},{o:'Conocimiento',id:'Acción 3',n:'Programa de democratización del conocimiento hídrico (Acuerdo de Escazú)'}],ts:['participación incidente','SNGA','Escazú','educación ambiental','acuerdos del agua','diálogo intercultural','CNA','saberes locales']},
+  {tema:'Instrumentos económicos y gobernanza financiera del agua',ac:[{o:'Instrumentos',id:'Comp. 5',n:'TUA como señal de presión hídrica · Tasa Retributiva articulada al PORH'},{o:'Instrumentos',id:'Comp. 6',n:'Gobernanza financiera: trazabilidad inversión-resultados en SNCA'},{o:'Calidad',id:'3.2-A',n:'Tasa Retributiva fortalecida para reducción de cargas contaminantes sectoriales'},{o:'Demanda',id:'AD4',n:'Acuerdos de corresponsabilidad con financiamiento por desempeño (MRV)'}],ts:['TUA','tasa retributiva','instrumentos económicos','gobernanza financiera','MRV','SNCA','trazabilidad','PGAR','PAC']},
+  {tema:'Eficiencia hídrica, reúso y economía circular del agua',ac:[{o:'Demanda',id:'AD5',n:'Estándares sectoriales de productividad hídrica y reconversión tecnológica'},{o:'Demanda',id:'AD6',n:'Escalamiento del reúso y recirculación de aguas residuales tratadas'},{o:'Instrumentos',id:'Comp. 4',n:'PUEAA vinculante con reúso y captación de agua lluvia como oferta gestionada'}],ts:['eficiencia hídrica','reúso','PUEAA','economía circular','productividad del agua','ODS 6.4','balance hídrico','reconversión tecnológica']},
+  {tema:'Justicia hídrica: territorios étnicos, PDET y comunidades vulnerables',ac:[{o:'Gobernanza',id:'LE1-AG5',n:'Ordenamiento alrededor del agua en municipios priorizados por el Acuerdo de Paz'},{o:'Calidad',id:'3.2-B',n:'Tratamiento aguas residuales y saneamiento con prioridad en PDET y comunidades étnicas'},{o:'Riesgo',id:'Acción 4.3',n:'Capacidad adaptativa en territorios étnicos y comunidades vulnerables'},{o:'Instrumentos',id:'Comp. 2',n:'PZA y ZAP en municipios PDET · gobernanza comunitaria no institucionalizada'}],ts:['municipios PDET','Acuerdo de Paz','comunidades étnicas','justicia hídrica','ZAP','PZA','ART','Ley 2565 de 2026']}
+];
+
+const TREE=[
+  {obj:'OBJ 1',name:'Conservar el ciclo\nhidrológico y ecosistemas',sub:'Oferta del agua',col:'#3aaa90',ls:[
+    {n:'Planificación alrededor del agua',s:'OTAA · 4 acciones',ac:['Articulación OT ambiental y territorial','Consolidación PEM (5 macrocuencas)','Operacionalización regiones hídricas','Zonas de Seguridad Hídrica (ZSH)']},
+    {n:'Conservación oferta hídrica',s:'3 acciones',ac:['Regulación hídrica e hidrosedimentología','Gestión diferenciada de ecosistemas','Aguas subterráneas integradas']}]},
+  {obj:'OBJ 2',name:'Gestión de la demanda\ny servicios ecosistémicos',sub:'3 líneas · 6 acciones',col:'#5b8fc9',ls:[
+    {n:'Gestión adaptativa demanda',s:'3 acciones',ac:['Formalización y registro de usuarios del agua','Módulos de consumo y estimación demanda','Actualización concesiones y permisos de agua']},
+    {n:'Corresponsabilidad sectorial',s:'2 acciones',ac:['Planes sectoriales articulados con GIRH','Acuerdos voluntarios corresponsabilidad']},
+    {n:'Uso eficiente y ahorro',s:'1 acción',ac:['Gestión conocimiento y seguimiento UEAA']}]},
+  {obj:'OBJ 3',name:'Calidad del agua\nminimizar contaminación',sub:'2 líneas · 6 acciones',col:'#e07b6c',ls:[
+    {n:'Planificación y admin. calidad',s:'2 acciones',ac:['Consolidación instrumentos calidad (PORH)','Actualización adaptativa normativa calidad']},
+    {n:'Prevención y reducción contaminación',s:'4 acciones',ac:['Reducción cargas contaminantes en origen','Tratamiento aguas residuales y saneamiento','Gestión fuentes difusas de contaminación','Gestión sedimentos contaminados']}]},
+  {obj:'OBJ 4',name:'Riesgos hídricos\ny adaptación climática',sub:'2 líneas · 5 acciones',col:'#a07cc5',ls:[
+    {n:'Integración riesgo en planificación',s:'3 acciones',ac:['Gestión riesgos asociados al agua (4.1)','Prog. intersectorial contaminación hídrica (4.2)','Capacidad adaptativa comunidades (4.3)']},
+    {n:'SbN e infraestructura natural',s:'2 acciones',ac:['Sistema nacional alertas tempranas (4.4)','SbN: infraestructura natural riesgos (4.5)']}]},
+  {obj:'OBJ 5',name:'Conocimiento\ne información hídrica',sub:'3 líneas · 4 acciones',col:'#c9a84c',ls:[
+    {n:'Generación y uso información',s:'SIRH+ · 2 acciones',ac:['SNCA: SIRH+ interoperable y multiescalar','Monitoreo 360° con estándares nacionales']},
+    {n:'Divulgación y democratización',s:'Escazú · 1 acción',ac:['Programa democratización conocimiento agua']},
+    {n:'I+D+i hídrica',s:'Fondo Innovación · 1 acción',ac:['Agenda I+D+i y Fondo Innovación en Agua']}]},
+  {obj:'OBJ 6',name:'Gobernanza\nmultinivel e inclusiva',sub:'5 líneas · 7 acciones',col:'#5aaa7a',ls:[
+    {n:'Fortalecimiento institucional',s:'CNA · SINA · 2 acciones',ac:['Fortalecimiento Consejo Nacional del Agua','Prog. capacidades institucionales y técnicas']},
+    {n:'Participación en gestión del agua',s:'Plataforma · 1 acción',ac:['Plataforma Nac. Participación Gobernanza']},
+    {n:'Culturas del agua',s:'1 acción',ac:['Prog. fortalecimiento culturas del agua']},
+    {n:'Conflictos y acuerdos del agua',s:'1 acción',ac:['Prog. nacional acuerdos del agua']},
+    {n:'Aguas transfronterizas',s:'1 acción',ac:['Estrategia aguas fronterizas/transfronterizas']},
+    {n:'Articulación OT ambiental-territorial',s:'1 acción',ac:['Ruta articulación instrumentos planif. ambiental y OT']}]},
+  {obj:'TRANSVERSAL',name:'Programa Unificado\nde Instrumentos',sub:'6 componentes · toda la PNA',col:'#3b82f6',ls:[
+    {n:'Marco gobernanza adaptativa',s:'Componente 1',ac:['Evaluaciones ERA/ENA · umbrales de actuación · gestión riesgo']},
+    {n:'Articulación territorial e intersectorial',s:'Componente 2',ac:['Coordinación CNA · gobernanza comunitaria · POT · PDET']},
+    {n:'Planificación integrada y multiescala',s:'Componente 3',ac:['PEM · POMCA · cuenca-costa-mar · acuíferos · agua verde']},
+    {n:'Administración criterios ecológicos',s:'Componente 4',ac:['Caudal ambiental vinculante · PUEAA · reúso como oferta']},
+    {n:'Señales económicas',s:'Componente 5',ac:['TUA señal presión hídrica · Tasa Retributiva al PORH']},
+    {n:'Gobernanza financiera',s:'Componente 6',ac:['Trazabilidad inversión-resultados hídricos · SNCA · PGAR']}]}
+];
+
+function buildMx(){
+  const cnt={},rl={};
+  OBJS.forEach(a=>{cnt[a]={};rl[a]={};OBJS.forEach(b=>{cnt[a][b]=0;rl[a][b]=[];})});
+  REL.forEach(r=>{
+    const os=[...new Set(r.p.map(p=>p[0]))];
+    for(let i=0;i<os.length;i++)for(let j=i+1;j<os.length;j++){
+      const a=os[i],b=os[j];cnt[a][b]++;cnt[b][a]++;rl[a][b].push(r);rl[b][a].push(r);
+    }
+  });
+  return{cnt,rl};
+}
+const{cnt,rl}=buildMx();
+
+function renderMx(){
+  const tb=document.getElementById('mxBody');
+  OBJS.forEach(ro=>{
+    const tr=document.createElement('tr');
+    const th=document.createElement('th');th.className='rh';
+    th.innerHTML=`<span style="display:inline-flex;align-items:center;gap:5px"><span style="width:9px;height:9px;border-radius:50%;background:${OC[ro]};display:inline-block;flex-shrink:0"></span>${ro}</span>`;
+    tr.appendChild(th);
+    OBJS.forEach(co=>{
+      const td=document.createElement('td');
+      if(ro===co){td.className='self';td.innerHTML='<div style="font-size:9px;color:#94a3b8">—</div>';}
+      else{
+        const c=cnt[ro][co];
+        if(!c){td.className='zero';td.innerHTML='<div class="cnt" style="color:#e2e8f0">0</div>';}
+        else{
+          const cr=rl[ro][co];
+          const hasS=cr.some(r=>r.t==='S');
+          const bg=hasS?`rgba(245,158,11,${.18+c*.07})`:`rgba(37,99,235,${.13+c*.08})`;
+          const tc=hasS?'#92400e':'#1e40af';
+          td.style.background=bg;
+          td.innerHTML=`<div class="cnt" style="color:${tc}">${c}</div><div class="lb2" style="color:${tc}">${hasS?'≈ sim':'↔ comp'}</div>`;
+          td.onclick=()=>showDetail(ro,co);
+        }
+      }
+      tr.appendChild(td);
+    });
+    tb.appendChild(tr);
+  });
+}
+
+function showDetail(a,b){
+  const bx=document.getElementById('dBox');
+  const cr=rl[a][b];
+  if(!cr||!cr.length){bx.innerHTML='<div class="ph">Sin relaciones entre '+a+' y '+b+'.</div>';return;}
+  let h=`<h3>Relaciones: ${a} ↔ ${b}</h3>`;
+  cr.forEach(r=>{
+    const tc=r.t==='S'?'#f59e0b':'#3b82f6';
+    const tl=r.t==='S'?'MUY SIMILAR':'COMPLEMENTARIA';
+    h+=`<div class="ri" style="border-left-color:${tc}"><div class="tp" style="color:${tc}">${tl}</div>
+    <div style="font-size:12px;font-weight:700;color:#1a2332;margin-bottom:5px">${r.tema}</div>`;
+    r.p.forEach(p=>{h+=`<span style="display:inline-flex;align-items:center;gap:5px;margin:2px 5px 2px 0">
+      <span style="background:${OC[p[0]]||'#3b82f6'};padding:2px 6px;border-radius:10px;font-size:9px;font-weight:700;color:#fff">${p[0]}</span>
+      <span style="font-size:10px;color:#475569">${p[1]}</span></span>`;});
+    if(r.nota)h+=`<div class="nt">${r.nota}</div>`;
+    h+='</div>';
+  });
+  bx.innerHTML=h;
+}
+
+function renderSim(){
+  document.getElementById('cSim').innerHTML=REL.filter(r=>r.t==='S').map(r=>`
+    <div class="card">
+      <span class="badge bdg-s">⚠ Alta superposición</span>
+      <h4>${r.tema}</h4>
+      ${r.p.map(p=>`<div class="ar"><span class="ot" style="background:${OC[p[0]]||'#3b82f6'}">${p[0]}</span><span class="at">${p[1]}</span></div>`).join('')}
+      ${r.nota?`<div class="nc">${r.nota}</div>`:''}
+    </div>`).join('');
+}
+
+function renderComp(){
+  document.getElementById('lComp').innerHTML=REL.filter(r=>r.t==='C').map(r=>`
+    <div class="cl" style="border-left:3px solid #3b82f6">
+      <div class="clh" onclick="this.parentElement.classList.toggle('open')">
+        <div style="width:22px;height:22px;border-radius:50%;background:#eff6ff;color:#2563eb;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0">${r.p.length}</div>
+        <h3>${r.tema}</h3><span class="clt">▼</span>
+      </div>
+      <div class="clb">
+        ${r.p.map(p=>`<div class="ar" style="margin-bottom:5px"><span class="ot" style="background:${OC[p[0]]||'#3b82f6'}">${p[0]}</span><span class="at">${p[1]}</span></div>`).join('')}
+        ${r.nota?`<div class="nc" style="margin-top:7px">${r.nota}</div>`:''}
+      </div></div>`).join('');
+}
+
+function renderClus(){
+  document.getElementById('lClus').innerHTML=CLUS.map((cl,i)=>`
+    <div class="cl ${i===0?'open':''}">
+      <div class="clh" onclick="this.parentElement.classList.toggle('open')">
+        <span class="clc">${cl.ac.length} acciones</span>
+        <h3>${cl.tema}</h3><span class="clt">▼</span>
+      </div>
+      <div class="clb">
+        <div style="margin-bottom:9px">${cl.ts.map(t=>`<span class="tt">${t}</span>`).join('')}</div>
+        ${cl.ac.map(a=>`<div class="ar" style="margin-bottom:5px"><span class="ot" style="background:${OC[a.o]||'#3b82f6'}">${a.o}</span><span class="at">${a.id} — ${a.n}</span></div>`).join('')}
+      </div></div>`).join('');
+}
+
+function showTab(name,e){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('panel-'+name).classList.add('active');
+  if(e)e.target.classList.add('active');
+  if(name==='mapa')renderTree();
+}
+
+let treeOk=false;
+function renderTree(){
+  if(treeOk)return;treeOk=true;
+  const ROW=40,GAP=20,PT=38,PB=48;
+  const RCX=64,RR=46;
+  const OX=128,OW=155;
+  const LX=OX+OW+13,LW=148;
+  const AX=LX+LW+13,AW=192,AH=32;
+  const SW=AX+AW+14;
+  const NS='http://www.w3.org/2000/svg';
+  function el(t,a){const e=document.createElementNS(NS,t);Object.entries(a).forEach(([k,v])=>e.setAttribute(k,String(v)));return e;}
+  function lig(h,f){const r=parseInt(h.slice(1,3),16),g=parseInt(h.slice(3,5),16),b=parseInt(h.slice(5,7),16);return`rgb(${Math.round(r+(255-r)*f)},${Math.round(g+(255-g)*f)},${Math.round(b+(255-b)*f)})`;}
+  function tx(p,t,x,y,fs,fi,fw,an){const e=el('text',{x,y,'text-anchor':an||'middle','dominant-baseline':'middle',fill:fi,'font-size':fs,'font-weight':fw||'500','font-family':'-apple-system,BlinkMacSystemFont,sans-serif','pointer-events':'none'});e.textContent=t;p.appendChild(e);}
+  function ww(t,mx){const ws=t.split(' ');const ls=[];let c='';ws.forEach(w=>{const tr=c?c+' '+w:w;if(tr.length<=mx)c=tr;else{if(c)ls.push(c);c=w.length>mx?w.substring(0,mx-1)+'…':w;}});if(c)ls.push(c);return ls;}
+  let y=PT;
+  TREE.forEach((o,oi)=>{if(oi>0)y+=GAP;o.y0=y;o.ls.forEach(l=>{l.y0=y;l.cy2=[];l.ac.forEach(()=>{l.cy2.push(y+ROW/2);y+=ROW;});l.y1=y;l.cy=(l.y0+l.y1)/2;});o.y1=y;o.cy=(o.y0+o.y1)/2;});
+  const SH=y+PB,RCY=SH/2;
+  const svg=document.getElementById('tree-svg');
+  svg.setAttribute('viewBox',`0 0 ${SW} ${SH}`);
+  svg.style.height=SH+'px';svg.style.minWidth=SW+'px';svg.innerHTML='';
+  svg.appendChild(el('rect',{width:SW,height:SH,fill:'#f7f4ef'}));
+  TREE.forEach(o=>{
+    const oCY=o.cy;
+    svg.appendChild(el('path',{d:`M ${RCX+RR} ${RCY} C ${RCX+RR+46} ${RCY} ${OX-26} ${oCY} ${OX} ${oCY}`,stroke:o.col,'stroke-width':'1.8',fill:'none',opacity:'0.52'}));
+    o.ls.forEach(l=>{
+      const lCY=l.cy;
+      svg.appendChild(el('path',{d:`M ${OX+OW} ${oCY} C ${OX+OW+24} ${oCY} ${LX-24} ${lCY} ${LX} ${lCY}`,stroke:o.col,'stroke-width':'1.3',fill:'none',opacity:'0.4'}));
+      l.cy2.forEach(aCY=>{svg.appendChild(el('path',{d:`M ${LX+LW} ${lCY} C ${LX+LW+17} ${lCY} ${AX-17} ${aCY} ${AX} ${aCY}`,stroke:o.col,'stroke-width':'1',fill:'none',opacity:'0.28'}));});
+    });
+  });
+  {
+    const g=el('g',{});
+    g.appendChild(el('circle',{cx:RCX,cy:RCY,r:RR,fill:'#1e4d3e'}));
+    ['Política','Nacional','del Agua','2026–2050'].forEach((rl,i,arr)=>tx(g,rl,RCX,RCY-(arr.length-1)*11.5/2+i*11.5,i<3?'9.5':'8.5','#fff',i<3?'700':'400'));
+    svg.appendChild(g);
+  }
+  TREE.forEach(o=>{
+    const oCY=o.cy,OH=Math.max(60,o.y1-o.y0);
+    {const g=el('g',{});
+    g.appendChild(el('rect',{x:OX,y:oCY-OH/2,width:OW,height:OH,rx:'9',fill:lig(o.col,.84),stroke:o.col,'stroke-width':'1.8'}));
+    g.appendChild(el('rect',{x:OX,y:oCY-OH/2,width:4,height:OH,rx:'3',fill:o.col}));
+    tx(g,o.obj,OX+OW/2+2,oCY-OH/2+10,'8',o.col,'800');
+    o.name.split('\n').forEach((nl,ni)=>tx(g,nl,OX+OW/2+2,oCY+(o.name.includes('\n')?-5:0)+ni*13,'10.5','#1a2332','700'));
+    tx(g,o.sub,OX+OW/2+2,oCY+OH/2-10,'8.5','#64748b','400');
+    svg.appendChild(g);}
+    o.ls.forEach(l=>{
+      const lCY=l.cy,LH=Math.max(36,l.y1-l.y0);
+      {const g=el('g',{});
+      g.appendChild(el('rect',{x:LX,y:lCY-LH/2,width:LW,height:LH,rx:'6',fill:lig(o.col,.9),stroke:o.col,'stroke-width':'1.1','stroke-opacity':'0.6'}));
+      const lnls=ww(l.n,18).slice(0,2);
+      const hasSub=!!l.s,lnOff=hasSub?-7:0,lh=12;
+      lnls.forEach((ll,li)=>tx(g,ll,LX+LW/2,lCY+lnOff-(lnls.length-1)*lh/2+li*lh,'9.5','#1e3a5c','600'));
+      if(hasSub)tx(g,l.s,LX+LW/2,lCY+8,'8.5',o.col,'400');
+      svg.appendChild(g);}
+      l.ac.forEach((ac,ai)=>{
+        const aCY=l.cy2[ai];
+        const g=el('g',{});
+        g.appendChild(el('rect',{x:AX,y:aCY-AH/2,width:AW,height:AH,rx:'4',fill:'white',stroke:o.col,'stroke-width':'0.8','stroke-opacity':'0.44'}));
+        g.appendChild(el('rect',{x:AX,y:aCY-AH/2,width:3,height:AH,rx:'3',fill:o.col,opacity:'0.6'}));
+        const ti=document.createElementNS(NS,'title');ti.textContent=ac;g.appendChild(ti);
+        const acls=ww(ac,28).slice(0,2);
+        acls.forEach((al,ali)=>{const t=el('text',{x:AX+8,y:aCY-(acls.length-1)*11/2+ali*11,'text-anchor':'start','dominant-baseline':'middle',fill:'#334155','font-size':'9.5','font-family':'-apple-system,BlinkMacSystemFont,sans-serif','pointer-events':'none'});t.textContent=al;g.appendChild(t);});
+        svg.appendChild(g);
+      });
+    });
+  });
+}
+renderMx();renderSim();renderComp();renderClus();
+</script>
+</body>
+</html>
